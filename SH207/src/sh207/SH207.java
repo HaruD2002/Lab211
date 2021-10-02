@@ -24,8 +24,8 @@ public class SH207 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the String:");
         String s; 
-        s = sc.nextLine();
-        System.out.println("The total number of word that in the second half of the alphabet is: " + secondHalfLetters(s));
+        s = sc.nextLine().trim();
+        System.out.println(secondHalfLetters(s));
         
    
      
@@ -33,12 +33,12 @@ public class SH207 {
     public static int secondHalfLetters(String s){
         
         int count =0;
-        for (int i = 0; i < s.length(); i++) {           
+        for (int i = 0; i < s.length()-1; i++) {           
             char ns = s.charAt(i);
                         if(ns>=78 && ns <=90 || ns>=110 && ns<=122){
                             count++;
-                        }
-                }
+                        }                
+        }
         
         return count;
     }
